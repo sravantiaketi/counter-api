@@ -11,6 +11,7 @@ This is a Springboot RESTful service for reading data from a file to achieve fol
   
   Step3: Using curl GET command on terminal send  requests to the application as shown in belwo example.
   >curl http://localhost:8080/counter-api/top/20 -H"Authorization: Basic dXNlcjpzcmF2YW50aQ==" -H"Accept: text/csv"
+  
   Output: 
   eget|17
   vel|17
@@ -35,4 +36,7 @@ This is a Springboot RESTful service for reading data from a file to achieve fol
   
   Step 4:Step3: Using curl POST command on terminal send  requests to the application as shown in belwo example.
   Open Command prompt at /counter-api> and type below command, make sure data.json exists in the folder where this command is executed.
-  >curl -X POST  http://localhost:8080/counter-api/search -H"Authorization: Basic dXNlcjpzcmF2YW50aQ==" -H"cache-control:no-cache" -H"content-type:application/json" -d"@data.json"
+  >curl -X POST  http://localhost:8080/counter-api/search -H"Authorization: Basic dXNlcjpzcmF2YW50aQ==" -H"cache-control:no-cache" -       H"content-type:application/json" -d"@data.json"
+  
+  Output:
+  {"counts":[{"Duise":0},{"Se":0},{"Donec":8},{"Augue":7},{"Pellentesque":6},{"123":0}]}
