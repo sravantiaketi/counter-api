@@ -3,7 +3,7 @@ This is a Springboot RESTful service for reading data from a file to achieve fol
 
   
   RUNNIG THE APPLICATION:
-  Step1: Clone the repository using below URL:
+  Step1: Clone the repository using URL:
          https://github.com/sravantiaketi/counter-api.git
   
   Step2: Go to application directory and run below command to start the application:
