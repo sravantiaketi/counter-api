@@ -1,0 +1,3 @@
+curl http://localhost:8080/counter-api/top/20 -H"Authorization: Basic dXNlcjpzcmF2YW50aQ==" H”Accept: text/csv
+
+curl -X POST  http://localhost:8080/counter-api/search -H"Authorization: Basic dXNlcjpzcmF2YW50aQ==" -H"cache-control:no-cache" -H"content-type:application/json" -d{"searchText":["Duis","Se","Donec","Augue","Pellentesque","123"]} 
