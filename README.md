@@ -8,7 +8,7 @@ This is a Springboot RESTful service for reading data from a file to achieve fol
   
   Step2: Go to application directory and run below command to start the application:
   mvn spring-boot:run
-  Note : Single User "user" is configured to invoke the services and authorization "dXNlcjpzcmF2YW50aQ" should be same
+  Note : Single User "user" is configured to invoke the services and authorization "dXNlcjpzcmF2YW50aQ==" should be same
   for all requests.
   
   Step3: Using curl GET command on terminal send  requests to the application as shown in belwo example.
