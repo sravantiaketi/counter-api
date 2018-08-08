@@ -1,16 +1,17 @@
 
 This is a Springboot RESTful service for reading data from a file to achieve following tasks:
-Task 1: Search the following texts, which will return the counts respectively.
-  Sample Request:
-  > curl http://host/counter-api/search -H"Authorization: Basic b3B0dXM6Y2FuZGlkYXRlcw==" d’{“searchText”:[“Duis”, “Sed”, “Donec”, “Augue”, “Pellentesque”, “123”]}’ -H"ContentType: application/json" –X POST 
- Result in JSON: > {"counts": [{"Duis": 11}, {"Sed": 16}, {"Donec": 8}, {"Augue": 7}, {"Pellentesque": 6}, {"123": 0}]} 
+
   
-Task 2: Provide the top 20 (as Path Variable) Texts, which has the highest counts in the Sample Paragraphs provided.
-  Sample Request
-  > curl http://host/counter-api/top/20 -H"Authorization: Basic <<PASSWORD_FROM_APPLCATION_LOGS>>" - H”Accept: text/csv”
-  Example:
-  > curl http://localhost:8080/counter-api/top/10 -H"Authorization: Basic dXNlcjoyYTk0ZTBkNC0yOGYyLTRhNjctYWU2OC05ZDBlODg4YWM4ODY=" -H "Accept:text/csv"
-  Result in CSV:
+  RUNNIG THE APPLICATION:
+  Step1: Clone the repository using below URL:
+ 
+  
+  Step2: Go to application directory and run below command to start the application:
+  mvn spring-boot:run
+  
+  Step3: Using curl GET command on terminal send  requests to the application as shown in belwo example.
+  >curl http://localhost:8080/counter-api/top/20 -H"Authorization: Basic dXNlcjpzcmF2YW50aQ==" -H"Accept: text/csv"
+  Output: 
   eget|17
   vel|17
   sed|16
@@ -21,12 +22,17 @@ Task 2: Provide the top 20 (as Path Variable) Texts, which has the highest count
   ac|12
   amet|12
   id|12
+  metus|12
+  nulla|12
+  sit|12
+  at|11
+  duis|11
+  ipsum|11
+  nec|11
+  vitae|11
+  aliquam|10
+  dolor|10
   
-  RUNNIG THE APPLICATION:
-  Step1: Clone the repository using below URL:
- 
-  
-  Step2: Go to application directory and run below command to start the application:
-  mvn spring-boot:run
-  
-  Step3: Using curl command on terminal send request to the application as shown in above example.
+  Step 4:Step3: Using curl POST command on terminal send  requests to the application as shown in belwo example.
+  Open Command prompt at /counter-api> and type below command, make sure data.json exists in the folder where this command is executed.
+  >curl -X POST  http://localhost:8080/counter-api/search -H"Authorization: Basic dXNlcjpzcmF2YW50aQ==" -H"cache-control:no-cache" -H"content-type:application/json" -d"@data.json"
