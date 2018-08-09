@@ -6,7 +6,7 @@ This is a Springboot RESTful service for reading data from a file to achieve fol
   Step1: Clone the repository using URL:
          https://github.com/sravantiaketi/counter-api.git
   
-  Step2: Go to application directory and run below command to start the application:
+  Step2: Go to application directory and run below command to start the application.Ensure Maven plugin is installed and then execute  below command:
   mvn spring-boot:run
   Note : Single User "user" is configured to invoke the services and authorization "dXNlcjpzcmF2YW50aQ==" should be same
   for all requests.
@@ -40,7 +40,7 @@ This is a Springboot RESTful service for reading data from a file to achieve fol
   
   Step 4:Step3: Using curl POST command on terminal send  requests to the application as shown in belwo example.
   Open Command prompt at /counter-api> and type below command, make sure data.json exists in the folder where this command is executed.
-  >curl -X POST  http://localhost:8080/counter-api/search -H"Authorization: Basic dXNlcjpzcmF2YW50aQ==" -H"cache-control:no-cache" -       H"content-type:application/json" -d"@data.json"
+  >curl -X POST  http://localhost:8080/counter-api/search -H"Authorization: Basic dXNlcjpzcmF2YW50aQ==" -H"cache-control:no-cache" -H"content-type:application/json" -d"@data.json"
   
   Output:
   {"counts":[{"Duise":0},{"Se":0},{"Donec":8},{"Augue":7},{"Pellentesque":6},{"123":0}]}
